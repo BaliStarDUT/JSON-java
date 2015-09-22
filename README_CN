@@ -1,64 +1,90 @@
 JSON in Java [package org.json]
+Java中的JSON包[package org.json]
 
 JSON is a light-weight, language independent, data interchange format.
 See http://www.JSON.org/
+JSON是一种轻量的，与编程语言无关的数据传输格式，格式详情参考：http://www.JSON.org/
 
 The files in this package implement JSON encoders/decoders in Java.
 It also includes the capability to convert between JSON and XML, HTTP
 headers, Cookies, and CDL.
+这个包中的文件是java中用来生成和解析JSON格式的类。
+它也支持在JSON格式与XML，HTTP头，Cookies和CDL之间的相互转换。
 
 This is a reference implementation. There is a large number of JSON packages
 in Java. Perhaps someday the Java community will standardize on one. Until
 then, choose carefully.
+这个包只是一个参考实现。在Java中有许多JSON包，可能某一天Java社区就会将其中一个作为标准。到那时候，你需要仔细选择其中一个。
 
 The license includes this restriction: "The software shall be used for good,
 not evil." If your conscience cannot live with that, then choose a different
 package.
+这些源代码的公开协议包含以下约束：这些软件需要被用在好的地方，不能用它们来作恶。
+如果你的良心不能遵守这条规则，那请选择别的软件包。
 
 The package compiles on Java 1.8.
+这个包在Java1.8下编译。
 
 
 JSONObject.java: The JSONObject can parse text from a String or a JSONTokener
 to produce a map-like object. The object provides methods for manipulating its
 contents, and for producing a JSON compliant object serialization.
+JSONObject.java: JSONObject类可以解析一个String或者JSONTokener，产生一个map类型的对象。
+这个类提供了操作元素内容的方法,并且实现了JSON对象的序列化。
 
 JSONArray.java: The JSONObject can parse text from a String or a JSONTokener
 to produce a vector-like object. The object provides methods for manipulating
 its contents, and for producing a JSON compliant array serialization.
+JSONArray.java: JSONObject类可以解析一个String或者JSONTokener，产生一个vector类型的对象。
+这个类提供了操作元素内容的方法，并且实现了JSON对象的序列化。
 
 JSONTokener.java: The JSONTokener breaks a text into a sequence of individual
 tokens. It can be constructed from a String, Reader, or InputStream.
+JSONTokener.java: JSONTokener类可以将文本解析成一系列独立标记的序列。
+它可以从一个String，Reader，或者InputStream中构造出。
 
 JSONException.java: The JSONException is the standard exception type thrown
 by this package.
+JSONException.java: JSONException类是这个包抛出的标准异常。
 
 
 JSONString.java: The JSONString interface requires a toJSONString method,
 allowing an object to provide its own serialization.
+JSONString.java: JSONString接口需要实现一个toJSONString方法，它可以实现对象的序列化。
 
 JSONStringer.java: The JSONStringer provides a convenient facility for
 building JSON strings.
+JSONStringer.java: JSONStringer类提供了一种方便的方法来构造JSON Strings。
 
 JSONWriter.java: The JSONWriter provides a convenient facility for building
 JSON text through a writer.
-
+JSONWriter.java: JSONWriter类提供了一种方便的方法来通过一个writer构建JSON文本。
 
 CDL.java: CDL provides support for converting between JSON and comma
 delimited lists.
+CDL.java: CDL类支持在JSON和逗号分隔列表之间的转换。
 
 Cookie.java: Cookie provides support for converting between JSON and cookies.
+Cookie.java: Cookie类支持在JSON和cookies之间的转换。
 
 CookieList.java: CookieList provides support for converting between JSON and
 cookie lists.
+CookieList.java: CookieList类支持在JSON和cookies list之间的转换。
 
 HTTP.java: HTTP provides support for converting between JSON and HTTP headers.
+HTTP.java: HTTP类支持在JSON和HTTP头之间的转换。
 
 HTTPTokener.java: HTTPTokener extends JSONTokener for parsing HTTP headers.
+HTTPTokener.java: HTTPTokener类扩展了JSONTokener类，增加了解析HTTP头的方法。
 
 XML.java: XML provides support for converting between JSON and XML.
+XML.java: XML类支持在JSON和XML之间的转换。
 
 JSONML.java: JSONML provides support for converting between JSONML and XML.
+JOSNML.java: JSONML类支持在JSONML和XML之间转换。
 
 XMLTokener.java: XMLTokener extends JSONTokener for parsing XML text.
+XMLTokener.java: XMLTokener类扩展了JSONTokener类来解析XML文本。
 
 Unit tests are maintained in a separate project. Contributing developers can test JSON-java pull requests with the code in this project: https://github.com/stleary/JSON-Java-unit-test
+单元测试在另一个项目里维护。相关贡献开发者可以用项目（https://github.com/stleary/JSON-Java-unit-test）中的代码来测试JSON-java。
